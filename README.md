@@ -189,7 +189,7 @@ python src/train_transformer.py --track
 
 **Abrham T. Tadesse**
 [GitHub](https://github.com/AbrhamTesf) 
-<!-- • [LinkedIn](https://linkedin.com/in/YOUR_PROFILE) • [HuggingFace](https://huggingface.co/YOUR_USERNAME) -->
+
 
 ---
 
