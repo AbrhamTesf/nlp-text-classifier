@@ -176,8 +176,8 @@ python src/train_transformer.py --track
 ## 🗺️ Roadmap
 
 - [x] Project setup & structure
-- [ ] Exploratory data analysis
-- [ ] Baseline model (TF-IDF)
+- [x] Exploratory data analysis
+- [x] Baseline model (TF-IDF)
 - [ ] DistilBERT fine-tuning
 - [ ] FastAPI serving
 - [ ] Weights & Biases integration
