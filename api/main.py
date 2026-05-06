@@ -5,6 +5,9 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import numpy as np
 import joblib
 import os
+import wandb
+
+wandb.init(project="nlp-text-classifier",job_type="inference")
 
 app = FastAPI(
     title="NLP Text Classifier API",
@@ -85,6 +88,12 @@ def predict(input: TextInput):
 
     predicted_idx = int(np.argmax(probs))
 
+    wandb.log({
+        "input_text":  input.text[:100],
+        "prediction":  LABEL_NAMES[predicted_idx],
+        "confidence":  float(probs[predicted_idx]),
+        "model_used":  input.model
+    })
     return PredictionOutput(
         label      = LABEL_NAMES[predicted_idx],
         confidence = round(float(probs[predicted_idx]), 4),

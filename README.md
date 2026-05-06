@@ -180,7 +180,7 @@ python src/train_transformer.py --track
 - [x] Baseline model (TF-IDF)
 - [x] DistilBERT fine-tuning
 - [x] FastAPI serving
-- [ ] Weights & Biases integration
+- [x] Weights & Biases integration
 - [ ] Final results & write-up
 
 ---
