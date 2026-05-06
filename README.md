@@ -69,7 +69,7 @@ All training runs are logged to **Weights & Biases** — including loss curves, 
 | TF-IDF + Logistic Regression | 91.91% | 0.92 | 67.0 sec |
 | DistilBERT (fine-tuned) | 94.7% | 0.9471 | ~19mins |
 
-> Results will be updated as experiments are completed.
+
 
 ---
 
@@ -179,7 +179,7 @@ python src/train_transformer.py --track
 - [x] Exploratory data analysis
 - [x] Baseline model (TF-IDF)
 - [x] DistilBERT fine-tuning
-- [ ] FastAPI serving
+- [x] FastAPI serving
 - [ ] Weights & Biases integration
 - [ ] Final results & write-up
 
