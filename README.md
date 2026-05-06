@@ -5,7 +5,8 @@
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow)
 ![FastAPI](https://img.shields.io/badge/API-FastAPI-green)
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![W&B](https://img.shields.io/badge/Tracked%20With-W%26B-yellow)
 
 ---
 
@@ -69,7 +70,7 @@ All training runs are logged to **Weights & Biases** — including loss curves, 
 | TF-IDF + Logistic Regression | 91.91% | 0.92 | 67.0 sec |
 | DistilBERT (fine-tuned) | 94.7% | 0.9471 | ~19mins |
 
-
+> DistilBERT achieves 2.79% improvement over the TF-IDF baseline.
 
 ---
 
@@ -165,11 +166,14 @@ python src/train_transformer.py --track
 
 ## 📚 Key Learnings
 
-> This section will be filled in as the project progresses.
-
-- Why transformer fine-tuning outperforms bag-of-words approaches
-- Trade-offs between model size, speed, and accuracy
-- How to structure an NLP project for production
+- Transformers vs classical ML: Fine-tuned DistilBERT outperformed TF-IDF
+  by 2.79% accuracy — but takes significantly longer to train
+- Tokenization matters: Aggressive text cleaning hurt transformer performance
+  since DistilBERT handles punctuation and casing internally
+- Production thinking: Wrapping the model in a FastAPI endpoint makes it
+  usable by any application, not just Python scripts
+- Experiment tracking: W&B makes it easy to compare runs and share results
+  with teammates
 
 ---
 
@@ -181,7 +185,7 @@ python src/train_transformer.py --track
 - [x] DistilBERT fine-tuning
 - [x] FastAPI serving
 - [x] Weights & Biases integration
-- [ ] Final results & write-up
+- [x] Final results & write-up
 
 ---
 
