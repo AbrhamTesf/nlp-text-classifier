@@ -67,7 +67,7 @@ All training runs are logged to **Weights & Biases** — including loss curves, 
 | Model | Accuracy | F1 Score (Macro) | Training Time |
 |---|---|---|---|
 | TF-IDF + Logistic Regression | 91.91% | 0.92 | 67.0 sec |
-| DistilBERT (fine-tuned) | — | — | — |
+| DistilBERT (fine-tuned) | 94.7% | 0.9471 | ~19mins |
 
 > Results will be updated as experiments are completed.
 
